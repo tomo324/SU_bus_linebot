@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import re
 
 class KokusaiScraper:
     def __init__(self):
@@ -14,9 +15,10 @@ class KokusaiScraper:
             for x in span_tag:
                 string = x.string
                 if string == '遅れなし':
-                    print(string)
+                    return None
                 else:
-                    print(string[2]) #(約1分の遅れ)の数字部分を取り出す
+                    num = re.findall(r'\d+', string)
+                    return num  #(約○分の遅れ)の数字部分を取り出す
 
 
 
@@ -32,13 +34,11 @@ class SeibuScraper:
             div_tag = delay_minutes.find_all('div')
             txt_list = [x.string for x in div_tag]
             string = txt_list[3]
-            num = ''.join(filter(str.isdigit, string))
-            print(num)
+            num = re.findall(r'\d+', string)
+            return num
 
+kokusaiscraper = KokusaiScraper()
+kokusaiscraper.scrape()
 
-
-kokusai_scraper = KokusaiScraper()
-kokusai_scraper.scrape()
-
-seibu_scraper = SeibuScraper()
-seibu_scraper.scrape()
+seibuscraper = SeibuScraper()
+seibuscraper.scrape()
