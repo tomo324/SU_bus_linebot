@@ -17,8 +17,10 @@ class KokusaiScraper:
                 if string == '遅れなし':
                     return None
                 else:
-                    num = re.findall(r'\d+', string)
-                    return num  #(約○分の遅れ)の数字部分を取り出す
+                    num = re.findall(r'\d+', string) #(約○分の遅れ)の数字部分を取り出す
+                    num = num[0]
+                    return num
+        return None
 
 
 
@@ -35,10 +37,6 @@ class SeibuScraper:
             txt_list = [x.string for x in div_tag]
             string = txt_list[3]
             num = re.findall(r'\d+', string)
+            num = num[0]
             return num
-
-kokusaiscraper = KokusaiScraper()
-kokusaiscraper.scrape()
-
-seibuscraper = SeibuScraper()
-seibuscraper.scrape()
+        return None
