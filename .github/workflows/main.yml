@@ -1,5 +1,5 @@
 # ワークフロー名
-name: bus_chatbot
+name: bus_linebot
 
 # 発火タイミング
 on:
