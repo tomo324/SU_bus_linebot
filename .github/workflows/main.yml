@@ -26,9 +26,9 @@ jobs:
           # 必要なパッケージインストール
           pip install -r requirements.txt
       - name: Run script
-#        env:
-#          CHANNEL_ACCESS_TOKEN: "YOUR_CHANNEL_ACCESS_TOKEN"
-#          USER_ID: "YOUR_USER_ID"
+        env:
+          CHANNEL_ACCESS_TOKEN: ${{ secrets.CHANNEL_ACCESS_TOKEN }}
+          USER_ID: ${{ secrets.USER_ID }}
         run: |
           # main.pyの実行
           python main.py
