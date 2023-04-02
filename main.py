@@ -1,9 +1,9 @@
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
-import settings
+import os
 import bus_info
 
-line_bot_api = LineBotApi(settings.CHANNEL_ACCESS_TOKEN)
+line_bot_api = LineBotApi(os.environ.get("CHANNEL_ACCESS_TOKEN"))
 
 kokusai_info = bus_info.KokusaiScraper()
 kokusai_result = kokusai_info.scrape()
@@ -15,7 +15,7 @@ text = ""
 
 def main():
     messages = TextSendMessage(text)
-    line_bot_api.push_message(settings.USER_ID, messages=messages)
+    line_bot_api.push_message(os.environ.get("USER_ID"), messages=messages)
 
 if __name__ == "__main__":
     if kokusai_result is not None:
