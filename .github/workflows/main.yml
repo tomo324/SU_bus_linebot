@@ -3,9 +3,8 @@ name: bus_linebot
 
 # 発火タイミング
 on:
-  push:
-#  schedule:
-#    - cron: '0 22 * * *'
+  schedule:
+    - cron: '*/10 20-23,0-13 * * *'
 
 jobs:
   build:
@@ -32,4 +31,3 @@ jobs:
         run: |
           # main.pyの実行
           python main.py
- 
