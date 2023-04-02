@@ -3,9 +3,8 @@ name: bus_linebot
 
 # 発火タイミング
 on:
-  push:
-#  schedule:
-#    - cron: '0 22 * * *'
+  schedule:
+    - cron: '*/10 20-13 * * *'
 
 jobs:
   build:
