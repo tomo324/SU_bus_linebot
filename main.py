@@ -19,7 +19,7 @@ def main():
 
 if __name__ == "__main__":
     if kokusai_result is not None:
-        if int(kokusai_result) > 5:
+        if int(kokusai_result) > 2:
             text += "国際興業バス:" + kokusai_result + "分の遅れ" + "\n"
     if seibu_result is not None:
         if int(seibu_result) > 18:
