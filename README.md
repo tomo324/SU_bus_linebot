@@ -12,7 +12,7 @@
 
 西武バス(https://transfer.navitime.biz/seibubus-dia/pc/location/BusLocationResult?startId=00111628&goalId=00111643)  
 
-この2つのWebサイトから北浦和駅西口から埼玉大学までの所要時間を取得し、一定の所要時間を超えたらLineに通知するようにしています。
+この2つのWebサイトから北浦和駅西口から埼玉大学までの所要時間を10分おきに取得し、一定の所要時間を超えたらLineに通知するようにしています。
 
 ## Lineの表示
 ![スクリーンショット (487)](https://user-images.githubusercontent.com/102280498/232309487-89b2c7ea-3c4f-436f-a69f-7a137f858f3a.png)  
