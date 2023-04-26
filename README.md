@@ -16,4 +16,4 @@
 
 ## Lineの表示
  
-![バスbot](https://user-images.githubusercontent.com/102280498/234618453-3634c157-b4c6-4459-bd91-417f308a4b3c.jpg)
+![バスbot (2)](https://user-images.githubusercontent.com/102280498/234618673-756526ed-3079-488c-b119-32b5f6998a2e.jpg)
