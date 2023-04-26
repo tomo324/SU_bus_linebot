@@ -15,4 +15,5 @@
 この2つのWebサイトから北浦和駅西口から埼玉大学までの所要時間を10分おきに取得し、一定の所要時間を超えたらLineに通知するようにしています。
 
 ## Lineの表示
-![スクリーンショット (487)](https://user-images.githubusercontent.com/102280498/232309487-89b2c7ea-3c4f-436f-a69f-7a137f858f3a.png)  
+ 
+![バスbot](https://user-images.githubusercontent.com/102280498/234618453-3634c157-b4c6-4459-bd91-417f308a4b3c.jpg)
